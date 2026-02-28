@@ -1,9 +1,22 @@
-word = "Donkey"
+class Calculator:
+    def __init__(self, n):
+        self.n = n 
+    
+    def square(self):
+        print(f"The square is {self.n*self.n}")
 
-with open("file.txt", "r") as f:
-    content = f.read()
+    def cube(self):
+        print(f"The cube is {self.n*self.n*self.n}")
 
-contentNew = content.replace(word, "######")
+    def squareroot(self):
+        print(f"The squareroot is {self.n**1/2}")
+    
+    @staticmethod
+    def hello():
+        print("Hello there!")
 
-with open("file.txt", "w") as f:
-    f.write(contentNew)
+a = Calculator(4)
+a.hello()
+a.square()
+a.cube()
+a.squareroot()
